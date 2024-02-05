@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "UD Digi Kyokasho N-B";
+  src: url("UDDigiKyokashoN-R.ttf") format("truetype");
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #336699;
+  font-family: "UD Digi Kyokasho N-B", sans-serif;
+}
+
+.title,
+#result {
+  color: white;
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+#result {
+  font-size: 150px;
+  position: relative;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 20px;
+  margin-top: -100px;
+}
+
+.title-container,
+.result-container,
+.button-container,
+.input-container {
+  width: 100%;
+  text-align: center;
+}
+
+.input-container {
+  background-color: #336699;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.character-input {
+  min-width: 100%;
+  min-height: 50px;
+  max-height: 400px;
+  max-width: 100%;
+  background-color: #336699;
+  font-size: 1.6em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-radius 0.5s;
+  color: white;
+  resize: both;
+  overflow: hidden;
+}
+
+.character-input:hover {
+  border-radius: 10px;
+}
+
+.result-container {
+  background-color: #336699;
+  width: 50px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  display: flex;
+  height: 100px;
+}
+#result {
+  margin-top: 100px;
+  font-size: 140px;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+  white-space: nowrap; 
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
+
+.button {
+  margin: auto;
+  color: white;
+  background-color: #6699cc;
+  height: 100px;
+  width: 150px;
+  min-width: 120px;
+  border: solid rgb(102, 102, 102);
+  border-width: 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.35s, background-color 0.15s;
+}
+
+#X-button {
+  font-size: 70px;
+  line-height: 70px;
+}
+
+#O-button {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.button:active {
+  background-color: #598ec4;
+}
+
+@media only screen and (max-width: 1023px) {
+  .character-input {
+    height: 65px;
+    font-size: 2em;
+  }
+
+  .result-container {
+    position: relative;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+  }
+
+  .result-container #result {
+    font-size: 65px;
+    height: 150px;
+  }
+
+  .button-container {
+    margin-bottom: 60px;
+  }
+
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title-container,
+  .result-container,
+  .button-container,
+  .input-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .input-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+ 
+  .title {
+    font-size: 30px;
+  }
+
+  .button {
+    height: 70px;
+    width: 100px;
+    min-width: 80px;
+  }
+
+  #X-button {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  #O-button {
+    font-size: 27px;
+    line-height: 27px;
+    font-weight: bold;
+  }
+}
