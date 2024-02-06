@@ -1,1 +1,1 @@
-Just a piece of code for a friend of mine. ; )
+Just a piece of code for a friend of mine.  
