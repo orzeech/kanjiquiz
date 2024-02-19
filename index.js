@@ -1,14 +1,12 @@
 let inputValues = [];
 
-function inputValue(event) {
-  if (event.keyCode === 13) {
-    let inputText = document.getElementById("input").value.trim();
-    let inputArray = inputText.split("");
-    inputArray.forEach((char) => {
-      inputValues.push(char);
-    });
-  }
+function inputValue() {
+  let inputText = document.getElementById("input").value.trim();
+  let inputArray = inputText.split("");
+  inputValues = inputArray;
 }
+
+document.getElementById("input").addEventListener("input", inputValue);
 
 let previousCharacter = "";
 
