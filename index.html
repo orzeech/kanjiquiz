@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kanji Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="title-container">
+        <h1 class="title">Kanji Quiz</h1>
+      </div>
+      <div class="result-container">
+        <div id="result"></div>
+      </div>
+      <div class="button-container">
+        <button onclick="oButton()" id="O-button" class="button">〇</button>
+        <button onclick="xButton()" id="X-button" class="button">×</button>
+      </div>
+      <div class="input-container">
+        <input type="radio" id="single" name="mode" checked="true"> 
+        <label for="single">Single character</label><br>
+        <input type="radio" id="line" name="mode">
+        <label for="line">Entire line</label><br>
+        <textarea
+          onkeyup="inputValue(event)"
+          id="input"
+          class="character-input"
+        ></textarea>
+      </div>
+    </div>
+  </body>
+</html>
