@@ -1,5 +1,5 @@
 let inputValues = [];
-const WELCOME_MESSAGE = "はじめましょ！";
+const WELCOME_MESSAGE = "はじめましょう！";
 const FINISH_MESSAGE = "おめでとう！＾＾";
 
 document.getElementById("result").innerText = WELCOME_MESSAGE;
@@ -7,7 +7,7 @@ document.getElementById("result").innerText = WELCOME_MESSAGE;
 function inputValue() {
   let inputText = document.getElementById("input").value.trim();
   let inputArray = inputText.split(isModeSingle() ? "" : "\n");
-  inputValues = inputArray;
+  inputValues = inputArray; 
 }
 
 function isModeSingle() {
@@ -42,14 +42,14 @@ function getRandomLine() {
     return FINISH_MESSAGE;
   }
   if (inputValues.length === 1) {
-    return inputValues[0];
+    return inputValues[0].replaceAll("　", " ");
   }
   let randomIndex = Math.floor(Math.random() * inputValues.length);
   if (randomIndex === previousIndex) {
     randomIndex = previousIndex === 0 ? 1 : previousIndex - 1;
   }
   previousIndex = randomIndex;
-  return inputValues[randomIndex];
+  return inputValues[randomIndex].replaceAll("　", " ");
 }
 
 function updateTextField() {
