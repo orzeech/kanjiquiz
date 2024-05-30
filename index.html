@@ -19,9 +19,9 @@
         <button onclick="xButton()" id="X-button" class="button">×</button>
       </div>
       <div class="input-container">
-        <input type="radio" id="single" name="mode" checked="true"> 
+        <input type="radio" id="single" name="mode" checked="true" onclick="inputValue()"> 
         <label for="single">Single character</label><br>
-        <input type="radio" id="line" name="mode">
+        <input type="radio" id="line" name="mode" onclick="inputValue()">
         <label for="line">Entire line</label><br>
         <textarea
           onkeyup="inputValue(event)"
